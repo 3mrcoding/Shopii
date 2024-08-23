@@ -8,12 +8,9 @@ const authRouter = require('./routes/authRoutes');
 const AppError = require('./util/AppError');
 const errController = require('./controller/errController');
 const reviewRouter = require('./routes/reviewRoutes');
-<<<<<<< HEAD
 const cartRouter = require('./routes/cartRoutes');
 const authController = require('./controller/authController');
 const cartController = require('./controller/cartController');
-=======
->>>>>>> main
 
 app.use(express.json());
 app.use(morgan('dev'));
@@ -22,16 +19,12 @@ app.use('/api/users', userRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/products', productRouter);
 app.use('/api/reviews', reviewRouter);
-<<<<<<< HEAD
 app.use(
   '/api/cart',
   authController.protect,
   cartController.checkCart,
   cartRouter
 );
-=======
-
->>>>>>> main
 
 app.all('*', (req, res, next) => {
   next(new AppError('Requested Route not found!', 404));
