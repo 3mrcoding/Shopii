@@ -1,40 +1,40 @@
-const express = require("express");
+const express = require('express');
 
 const router = express.Router();
 
-const userController = require("../controller/userController");
-const authController = require("../controller/authController");
+const userController = require('../controller/userController');
+const authController = require('../controller/authController');
 
 router
-  .route("/")
+  .route('/')
   .get(
     authController.protect,
-    authController.restrictedTo("admin"),
+    authController.restrictedTo('admin'),
     userController.getAllUsers
   );
 router
-  .route("/id/:id")
+  .route('/id/:id')
   .get(
     authController.protect,
-    authController.restrictedTo("admin"),
+    authController.restrictedTo('admin'),
     userController.getUserById
   )
   .delete(
     authController.protect,
-    authController.restrictedTo("admin"),
+    authController.restrictedTo('admin'),
     userController.deleteUserById
   );
 
-router.route("/forgetpassword").patch(authController.forgetPass);
-router.route("/resetpassword/:token").patch(authController.resetPass);
+router.route('/forgetpassword').patch(authController.forgetPass);
+router.route('/resetpassword/:token').patch(authController.resetPass);
 router
-  .route("/me")
+  .route('/me')
   .get(authController.protect, userController.getMe)
   .patch(authController.protect, userController.updateMe);
 router
-  .route("/me/updatePass")
+  .route('/me/updatePass')
   .patch(authController.protect, authController.updatePass);
 router
-  .route("/me/delete")
+  .route('/me/delete')
   .delete(authController.protect, authController.deleteMe);
 module.exports = router;
