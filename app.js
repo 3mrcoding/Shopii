@@ -11,6 +11,7 @@ const reviewRouter = require('./routes/reviewRoutes');
 const cartRouter = require('./routes/cartRoutes');
 const authController = require('./controller/authController');
 const cartController = require('./controller/cartController');
+const orderRouter = require('./routes/orderRoutes');
 
 app.use(express.json());
 app.use(morgan('dev'));
@@ -25,6 +26,7 @@ app.use(
   cartController.checkCart,
   cartRouter
 );
+app.use('/api/order', authController.protect, orderRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError('Requested Route not found!', 404));
