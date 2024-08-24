@@ -12,6 +12,8 @@ const cartRouter = require('./routes/cartRoutes');
 const authController = require('./controller/authController');
 const cartController = require('./controller/cartController');
 const orderRouter = require('./routes/orderRoutes');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./swagger.json');
 
 app.use(express.json());
 app.use(morgan('dev'));
@@ -27,6 +29,7 @@ app.use(
   cartRouter
 );
 app.use('/api/order', authController.protect, orderRouter);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.all('*', (req, res, next) => {
   next(new AppError('Requested Route not found!', 404));

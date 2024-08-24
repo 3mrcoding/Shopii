@@ -1,8 +1,15 @@
 const Cart = require('../models/cartModel');
-
 const catchAsync = require('../util/AsyncCatch');
 
-// Middleware function checks whether the current user's cart has any items
+/**
+ * Middleware function checks whether the current user's cart has any items.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ * @throws Will throw an error if the operation fails.
+ */
 exports.checkCart = catchAsync(async (req, res, next) => {
   const cart = await Cart.find({ userId: req.user.id });
   req.cart = cart;
@@ -18,7 +25,15 @@ exports.checkCart = catchAsync(async (req, res, next) => {
   next();
 });
 
-// Middleware that sends a response containing all the items in the user's cart
+/**
+ * Middleware that sends a response containing all the items in the user's cart.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ * @throws Will throw an error if the operation fails.
+ */
 exports.getAllCartItems = catchAsync(async (req, res, next) => {
   res.status(200).json({
     Status: 'Success',
@@ -32,20 +47,24 @@ exports.getAllCartItems = catchAsync(async (req, res, next) => {
   });
 });
 
-// This function updates the quantity of a specific product in the user's cart,
+/**
+ * Updates the quantity of a specific product in the user's cart.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ * @throws Will throw an error if the operation fails.
+ */
 exports.modifyCartQunt = catchAsync(async (req, res, next) => {
   const productId = req.params.id;
   const { newQuantity } = req.body;
   const product = req.cart[0].items.find(
-    // Searche for the product in the cart based on the productId,
-    // parameter and updates its quantity to the value provided in the request body (newQuantity)
     el => el.productId._id.toString() === productId
   );
 
   if (product) {
     product.quantity = newQuantity;
-
-    // After updating, it saves the cart and returns a success message.
     await req.cart[0].calculateTotalAmount();
     req.cart[0].save();
 
@@ -56,16 +75,21 @@ exports.modifyCartQunt = catchAsync(async (req, res, next) => {
   }
 });
 
-// Remove a specific product from the user's cart.
+/**
+ * Removes a specific product from the user's cart.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ * @throws Will throw an error if the operation fails.
+ */
 exports.deleteCartItem = catchAsync(async (req, res, next) => {
   const productId = req.params.id;
   req.cart[0].items = req.cart[0].items.filter(
-    // It filters out the product by its productId, updates the cart items,
     el => el.productId._id.toString() !== productId
   );
-  // Save the updated cart and success response send back after the product is deleted
   await req.cart[0].calculateTotalAmount();
-
   req.cart[0].save();
   return res.status(204).json({
     status: 'Success',
@@ -73,19 +97,24 @@ exports.deleteCartItem = catchAsync(async (req, res, next) => {
   });
 });
 
-//  Add a new product to the user's cart.
+/**
+ * Adds a new product to the user's cart.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ * @throws Will throw an error if the operation fails.
+ */
 exports.addCartItem = catchAsync(async (req, res, next) => {
   const cart = await Cart.find({ userId: req.user.id });
-  // It takes the productId from the URL parameters and the newQuantity from the request body.
   const productId = req.params.id;
   const { newQuantity } = req.body;
-  // Create a new cart item and add it to the cart, after updating the cart.
   const addedProduct = {
     productId: productId,
     quantity: newQuantity
   };
 
-  // Save the changes and returns a success message.
   cart[0].items.push(addedProduct);
   await cart[0].calculateTotalAmount();
   cart[0].save();

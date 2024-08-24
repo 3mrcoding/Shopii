@@ -2,6 +2,15 @@ const Order = require('../models/orderModel');
 const catchAsync = require('../util/AsyncCatch');
 const AppError = require('../util/AppError');
 
+/**
+ * Creates a new order for the currently authenticated user.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ * @throws Will throw an error if the order creation fails.
+ */
 exports.createOrder = catchAsync(async (req, res, next) => {
   const { shippingAddress, telephone } = req.body;
 
@@ -27,7 +36,15 @@ exports.createOrder = catchAsync(async (req, res, next) => {
   });
 });
 
-// Retrieve all orders from the database.
+/**
+ * Retrieves all orders from the database.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ * @throws Will throw an error if no orders are found.
+ */
 exports.getOrders = catchAsync(async (req, res, next) => {
   const orders = await Order.find();
   // Check if orders exist
@@ -41,7 +58,15 @@ exports.getOrders = catchAsync(async (req, res, next) => {
   });
 });
 
-// Retrieve the order history of the currently authenticated user.
+/**
+ * Retrieves the order history of the currently authenticated user.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ * @throws Will throw an error if no orders are found for the user.
+ */
 exports.getOrderHistory = catchAsync(async (req, res, next) => {
   // Find orders for the logged-in user
   const order = await Order.find({ userId: req.user.id });
@@ -56,7 +81,15 @@ exports.getOrderHistory = catchAsync(async (req, res, next) => {
   });
 });
 
-// Update the status and shipping tracking information of an order
+/**
+ * Updates the status and shipping tracking information of an order.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ * @throws Will throw an error if the order update fails.
+ */
 exports.modifyOrderStatus = catchAsync(async (req, res, next) => {
   const { shippingTracking, orderStatus } = req.body;
 

@@ -1,7 +1,14 @@
 const Review = require('./../models/reviewModel');
 const catchAsync = require('./../util/AsyncCatch');
 
-// Retrieve all reviews from the database, filtered by a specific product ID if provided
+/**
+ * Retrieves all reviews from the database, optionally filtered by a specific product ID.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ */
 exports.getAllReviews = catchAsync(async (req, res, next) => {
   let filter = {};
   if (req.params.productId) filter = { product: req.params.productId };
@@ -13,15 +20,22 @@ exports.getAllReviews = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: 'success',
     results: reviews.length,
-    date: {
+    data: {
       reviews
     }
   });
 });
 
-// Allow users to create a new review for a product
+/**
+ * Allows users to create a new review for a product.
+ * @async
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Middleware function to pass control to the next middleware.
+ */
 exports.createReview = catchAsync(async (req, res, next) => {
-  // To allow nested routes
+  // To allow nested routes, set product ID and user ID from parameters if not already present in the body.
   if (!req.body.product) req.body.product = req.params.productId;
   if (!req.body.user) req.body.user = req.user.id;
 
@@ -30,7 +44,7 @@ exports.createReview = catchAsync(async (req, res, next) => {
   // Send a 201 Created HTTP status response.
   res.status(201).json({
     status: 'success',
-    date: {
+    data: {
       review: newReview
     }
   });

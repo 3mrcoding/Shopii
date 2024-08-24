@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
-// Define the cart item schema
+/**
+ * Defines the schema for a cart item.
+ * @typedef {Object} CartItemSchema
+ * @property {ObjectID} productId - The ID of the product in this cart item.
+ * @property {Number} quantity - The number of items in this cart item.
+ */
 const cartItemSchema = new mongoose.Schema({
   productId: {
     type: mongoose.Schema.ObjectId,
@@ -13,10 +18,18 @@ const cartItemSchema = new mongoose.Schema({
     min: 1,
     default: 1
   },
-  _id: false
+  _id: false // Prevent mongoose from creating an _id field
 });
 
-// Define the cart schema
+/**
+ * Defines the schema for a cart.
+ * @typedef {Object} CartSchema
+ * @property {ObjectID} userId - The ID of the user who owns this cart.
+ * @property {Array<CartItemSchema>} items - An array of cart items.
+ * @property {Number} totalAmount - The total cost of all items in this cart.
+ * @property {Date} createdAt - The date when this cart was created.
+ * @property {Date} updatedAt - The date when this cart was last updated.
+ */
 const cartSchema = new mongoose.Schema(
   {
     userId: {
@@ -39,14 +52,22 @@ const cartSchema = new mongoose.Schema(
       default: Date.now
     }
   },
-  { versionKey: false }
+  { versionKey: false } // Disable mongoose's __v field
 );
 
+/**
+ * Pre-hook middleware for finding documents.
+ * @param {Function} next - The next middleware function in the chain.
+ */
 cartSchema.pre(/^find/, function(next) {
   this.populate('items.productId');
   next();
 });
 
+/**
+ * Method to calculate the total amount of items in this cart.
+ * @returns {Promise<Number>} The total amount of items in this cart.
+ */
 cartSchema.methods.calculateTotalAmount = async function() {
   // Ensure product details are populated
   await this.populate('items.productId');
@@ -59,11 +80,19 @@ cartSchema.methods.calculateTotalAmount = async function() {
   return this.totalAmount;
 };
 
+/**
+ * Pre-hook middleware for saving documents.
+ * @param {Function} next - The next middleware function in the chain.
+ */
 cartSchema.pre('save', function(next) {
   this.updatedAt = Date.now();
   next();
 });
 
+/**
+ * Creates a new Cart model based on the cartSchema.
+ * @type {mongoose.Model}
+ */
 const Cart = mongoose.model('Cart', cartSchema);
 
 module.exports = Cart;
