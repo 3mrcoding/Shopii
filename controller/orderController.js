@@ -56,7 +56,7 @@ exports.getOrderHistory = catchAsync(async (req, res, next) => {
   });
 });
 
-// Update the status and shipping tracking information of an order.
+// Update the status and shipping tracking information of an order
 exports.modifyOrderStatus = catchAsync(async (req, res, next) => {
   const { shippingTracking, orderStatus } = req.body;
 
