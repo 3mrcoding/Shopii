@@ -28,8 +28,7 @@ exports.register = catchAsync(async (req, res, next) => {
     name: req.body.name,
     email: req.body.email,
     password: req.body.password,
-    passwordConfirm: req.body.passwordConfirm,
-    role: req.body.role
+    passwordConfirm: req.body.passwordConfirm
   });
   const token = signToken(user._id);
   res.status(201).json({

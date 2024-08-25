@@ -36,7 +36,7 @@ exports.getAllReviews = catchAsync(async (req, res, next) => {
  */
 exports.createReview = catchAsync(async (req, res, next) => {
   // To allow nested routes, set product ID and user ID from parameters if not already present in the body.
-  if (!req.body.product) req.body.product = req.params.productId;
+  if (!req.body.product) req.body.product = req.params.id;
   if (!req.body.user) req.body.user = req.user.id;
 
   const newReview = await Review.create(req.body);

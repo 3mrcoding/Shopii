@@ -30,7 +30,7 @@ exports.getallProduct = catchAsync(async (req, res, next) => {
  * @param {Function} next - Middleware function to pass control to the next middleware.
  */
 exports.getProduct = catchAsync(async (req, res, next) => {
-  const product = await Product.findById(req.params.id);
+  const product = await Product.findById(req.params.id).populate('reviews');
 
   res.status(200).json({
     status: 'success',

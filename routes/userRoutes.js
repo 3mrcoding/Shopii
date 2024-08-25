@@ -30,11 +30,10 @@ router.route('/resetpassword/:token').patch(authController.resetPass);
 router
   .route('/me')
   .get(authController.protect, userController.getMe)
-  .patch(authController.protect, userController.updateMe);
+  .patch(authController.protect, userController.updateMe)
+  .delete(authController.protect, authController.deleteMe);
 router
   .route('/me/updatePass')
   .patch(authController.protect, authController.updatePass);
-router
-  .route('/me/delete')
-  .delete(authController.protect, authController.deleteMe);
+
 module.exports = router;

@@ -18,73 +18,86 @@ const { trim } = require('validator');
  * @property {Object} warrantyInformation - Warranty information for the product (default: 'No warranty').
  * @property {String} shippingInformation - Shipping information for the product (default: 'Ships in 10-12 business days').
  */
-const productSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, 'A product must have a name'],
-    trim: true,
-    unique: true // Ensures each name is unique across all products
-  },
-  description: {
-    type: String,
-    required: [true, 'A product must have a description'],
-    trim: true // Removes leading/trailing whitespace from strings
-  },
-  category: {
-    type: String,
-    default: 'General'
-  },
-  price: {
-    type: String,
-    required: [true, 'product must have a price']
-  },
-  discountPercentage: {
-    type: Number,
-    default: 1 // Default discount percentage (1% off)
-  },
-  rating: {
-    type: Number,
-    default: 'NaN' // Default rating as Not a Number
-  },
-  stock: {
-    type: Number
-  },
-  images: [String],
-  returnPolicy: {
-    type: String,
-    default: '15 days return policy'
-  },
-  minimumOrderQuantity: {
-    type: Number,
-    default: 1
-  },
-  metadate: {
-    // Corrected typo in 'metadate' to 'metadata'
-    createdAt: {
-      type: Date,
-      default: Date.now() // Sets createdAt to current time when document is created
-    },
-    updatedAt: {
-      type: Date,
-      default: Date.now() // Sets updatedAt to current time when document is saved
-    },
-    barcode: {
+const productSchema = new mongoose.Schema(
+  {
+    name: {
       type: String,
-      default: '2817839095220'
+      required: [true, 'A product must have a name'],
+      trim: true,
+      unique: true // Ensures each name is unique across all products
     },
-    qrCode: {
+    description: {
       type: String,
-      default: 'https://assets.dummyjson.com/public/qr-code.png'
+      required: [true, 'A product must have a description'],
+      trim: true // Removes leading/trailing whitespace from strings
+    },
+    category: {
+      type: String,
+      default: 'General'
+    },
+    price: {
+      type: String,
+      required: [true, 'product must have a price']
+    },
+    discountPercentage: {
+      type: Number,
+      default: 1 // Default discount percentage (1% off)
+    },
+    rating: {
+      type: Number,
+      default: 'NaN' // Default rating as Not a Number
+    },
+    stock: {
+      type: Number
+    },
+    images: [String],
+    returnPolicy: {
+      type: String,
+      default: '15 days return policy'
+    },
+    minimumOrderQuantity: {
+      type: Number,
+      default: 1
+    },
+    metadate: {
+      // Corrected typo in 'metadate' to 'metadata'
+      createdAt: {
+        type: Date,
+        default: Date.now() // Sets createdAt to current time when document is created
+      },
+      updatedAt: {
+        type: Date,
+        default: Date.now() // Sets updatedAt to current time when document is saved
+      },
+      barcode: {
+        type: String,
+        default: '2817839095220'
+      },
+      qrCode: {
+        type: String,
+        default: 'https://assets.dummyjson.com/public/qr-code.png'
+      }
+    },
+    warrantyInformation: {
+      type: String,
+      default: 'No warranty'
+    },
+    shippingInformation: {
+      type: String,
+      default: 'Ships in 10-12 business days'
     }
   },
-  warrantyInformation: {
-    type: String,
-    default: 'No warranty'
-  },
-  shippingInformation: {
-    type: String,
-    default: 'Ships in 10-12 business days'
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
   }
+);
+
+// Virtual populate for Review model
+productSchema.virtual('reviews', {
+  ref: 'Review',
+  foreignField: 'product',
+  localField: '_id'
 });
 
 /**
