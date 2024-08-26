@@ -1,0 +1,508 @@
+[
+    {
+        "name": "Wireless Earbuds",
+        "description": "High-quality wireless earbuds with noise-cancellation feature.",
+        "category": "Electronics",
+        "price": "79.99",
+        "discountPercentage": 10,
+        "rating": 4.5,
+        "stock": 120,
+        "images": [
+            "image1.jpg",
+            "image2.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-01T12:00:00Z",
+            "updatedAt": "2024-08-01T12:00:00Z",
+            "barcode": "2817839095220",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 5-7 business days"
+    },
+    {
+        "name": "Gaming Laptop",
+        "description": "Powerful gaming laptop with high-end graphics card.",
+        "category": "Computers",
+        "price": "1499.99",
+        "discountPercentage": 15,
+        "rating": 4.7,
+        "stock": 45,
+        "images": [
+            "laptop1.jpg",
+            "laptop2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-07-15T08:00:00Z",
+            "updatedAt": "2024-07-15T08:00:00Z",
+            "barcode": "2817839095221",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "2-year warranty",
+        "shippingInformation": "Ships in 7-10 business days"
+    },
+    {
+        "name": "Smartphone",
+        "description": "Latest model smartphone with 128GB storage.",
+        "category": "Mobile Phones",
+        "price": "699.99",
+        "discountPercentage": 5,
+        "rating": 4.6,
+        "stock": 200,
+        "images": [
+            "phone1.jpg",
+            "phone2.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-07-20T14:00:00Z",
+            "updatedAt": "2024-07-20T14:00:00Z",
+            "barcode": "2817839095222",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 3-5 business days"
+    },
+    {
+        "name": "Bluetooth Speaker",
+        "description": "Portable Bluetooth speaker with deep bass.",
+        "category": "Audio",
+        "price": "49.99",
+        "discountPercentage": 20,
+        "rating": 4.3,
+        "stock": 80,
+        "images": [
+            "speaker1.jpg",
+            "speaker2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-02T09:00:00Z",
+            "updatedAt": "2024-08-02T09:00:00Z",
+            "barcode": "2817839095223",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "6-month warranty",
+        "shippingInformation": "Ships in 5-7 business days"
+    },
+    {
+        "name": "4K TV",
+        "description": "Ultra HD 4K TV with smart features.",
+        "category": "Home Entertainment",
+        "price": "899.99",
+        "discountPercentage": 12,
+        "rating": 4.8,
+        "stock": 30,
+        "images": [
+            "tv1.jpg",
+            "tv2.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-05T11:00:00Z",
+            "updatedAt": "2024-08-05T11:00:00Z",
+            "barcode": "2817839095224",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "3-year warranty",
+        "shippingInformation": "Ships in 7-10 business days"
+    },
+    {
+        "name": "Smart Watch",
+        "description": "Smart watch with fitness tracking and heart rate monitor.",
+        "category": "Wearables",
+        "price": "199.99",
+        "discountPercentage": 18,
+        "rating": 4.2,
+        "stock": 150,
+        "images": [
+            "watch1.jpg",
+            "watch2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-01T07:00:00Z",
+            "updatedAt": "2024-08-01T07:00:00Z",
+            "barcode": "2817839095225",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 3-5 business days"
+    },
+    {
+        "name": "Electric Toothbrush",
+        "description": "Rechargeable electric toothbrush with multiple brushing modes.",
+        "category": "Personal Care",
+        "price": "39.99",
+        "discountPercentage": 15,
+        "rating": 4.4,
+        "stock": 100,
+        "images": [
+            "toothbrush1.jpg",
+            "toothbrush2.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-07-28T10:00:00Z",
+            "updatedAt": "2024-07-28T10:00:00Z",
+            "barcode": "2817839095226",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 5-7 business days"
+    },
+    {
+        "name": "Digital Camera",
+        "description": "High-resolution digital camera with 4K video recording.",
+        "category": "Cameras",
+        "price": "499.99",
+        "discountPercentage": 8,
+        "rating": 4.6,
+        "stock": 60,
+        "images": [
+            "camera1.jpg",
+            "camera2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-03T15:00:00Z",
+            "updatedAt": "2024-08-03T15:00:00Z",
+            "barcode": "2817839095227",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "2-year warranty",
+        "shippingInformation": "Ships in 7-10 business days"
+    },
+    {
+        "name": "Electric Kettle",
+        "description": "Stainless steel electric kettle with automatic shut-off.",
+        "category": "Kitchen Appliances",
+        "price": "29.99",
+        "discountPercentage": 25,
+        "rating": 4.1,
+        "stock": 75,
+        "images": [
+            "kettle1.jpg",
+            "kettle2.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-04T13:00:00Z",
+            "updatedAt": "2024-08-04T13:00:00Z",
+            "barcode": "2817839095228",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 5-7 business days"
+    },
+    {
+        "name": "Smart Light Bulb",
+        "description": "Wi-Fi enabled smart light bulb with color-changing options.",
+        "category": "Smart Home",
+        "price": "19.99",
+        "discountPercentage": 30,
+        "rating": 4.7,
+        "stock": 90,
+        "images": [
+            "bulb1.jpg",
+            "bulb2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-06T16:00:00Z",
+            "updatedAt": "2024-08-06T16:00:00Z",
+            "barcode": "2817839095229",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "2-year warranty",
+        "shippingInformation": "Ships in 3-5 business days"
+    },
+    {
+        "name": "Fitness Tracker",
+        "description": "Wearable fitness tracker with step counter and sleep monitor.",
+        "category": "Wearables",
+        "price": "49.99",
+        "discountPercentage": 12,
+        "rating": 4.3,
+        "stock": 110,
+        "images": [
+            "tracker1.jpg",
+            "tracker2.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-02T08:00:00Z",
+            "updatedAt": "2024-08-02T08:00:00Z",
+            "barcode": "2817839095230",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 5-7 business days"
+    },
+    {
+        "name": "Instant Pot",
+        "description": "Multi-function electric pressure cooker with 10-in-1 features.",
+        "category": "Kitchen Appliances",
+        "price": "99.99",
+        "discountPercentage": 20,
+        "rating": 4.9,
+        "stock": 50,
+        "images": [
+            "instantpot1.jpg",
+            "instantpot2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-07T10:00:00Z",
+            "updatedAt": "2024-08-07T10:00:00Z",
+            "barcode": "2817839095231",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "2-year warranty",
+        "shippingInformation": "Ships in 7-10 business days"
+    },
+    {
+        "name": "Noise Cancelling Headphones",
+        "description": "Over-ear noise-cancelling headphones with high-quality sound.",
+        "category": "Audio",
+        "price": "249.99",
+        "discountPercentage": 15,
+        "rating": 4.6,
+        "stock": 60,
+        "images": [
+            "headphones1.jpg",
+            "headphones2.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-06T12:00:00Z",
+            "updatedAt": "2024-08-06T12:00:00Z",
+            "barcode": "2817839095232",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "2-year warranty",
+        "shippingInformation": "Ships in 5-7 business days"
+    },
+    {
+        "name": "Coffee Maker",
+        "description": "Programmable coffee maker with built-in grinder.",
+        "category": "Kitchen Appliances",
+        "price": "129.99",
+        "discountPercentage": 18,
+        "rating": 4.5,
+        "stock": 70,
+        "images": [
+            "coffeemaker1.jpg",
+            "coffeemaker2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-04T11:00:00Z",
+            "updatedAt": "2024-08-04T11:00:00Z",
+            "barcode": "2817839095233",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 7-10 business days"
+    },
+    {
+        "name": "Electric Scooter",
+        "description": "Foldable electric scooter with long battery life.",
+        "category": "Outdoor",
+        "price": "399.99",
+        "discountPercentage": 10,
+        "rating": 4.4,
+        "stock": 40,
+        "images": [
+            "scooter1.jpg",
+            "scooter2.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-08T14:00:00Z",
+            "updatedAt": "2024-08-08T14:00:00Z",
+            "barcode": "2817839095234",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 5-7 business days"
+    },
+    {
+        "name": "Portable Charger",
+        "description": "High-capacity portable charger with fast charging support.",
+        "category": "Accessories",
+        "price": "24.99",
+        "discountPercentage": 20,
+        "rating": 4.3,
+        "stock": 130,
+        "images": [
+            "charger1.jpg",
+            "charger2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-03T10:00:00Z",
+            "updatedAt": "2024-08-03T10:00:00Z",
+            "barcode": "2817839095235",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 3-5 business days"
+    },
+    {
+        "name": "Home Security Camera",
+        "description": "Wi-Fi enabled home security camera with night vision.",
+        "category": "Smart Home",
+        "price": "89.99",
+        "discountPercentage": 12,
+        "rating": 4.6,
+        "stock": 55,
+        "images": [
+            "camera2.jpg",
+            "camera3.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-05T15:00:00Z",
+            "updatedAt": "2024-08-05T15:00:00Z",
+            "barcode": "2817839095236",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 5-7 business days"
+    },
+    {
+        "name": "Smart Thermostat",
+        "description": "Programmable smart thermostat with remote control.",
+        "category": "Smart Home",
+        "price": "149.99",
+        "discountPercentage": 10,
+        "rating": 4.7,
+        "stock": 65,
+        "images": [
+            "thermostat1.jpg",
+            "thermostat2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-06T09:00:00Z",
+            "updatedAt": "2024-08-06T09:00:00Z",
+            "barcode": "2817839095237",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "2-year warranty",
+        "shippingInformation": "Ships in 7-10 business days"
+    },
+    {
+        "name": "Electric Shaver",
+        "description": "Rechargeable electric shaver with precision trimmer.",
+        "category": "Personal Care",
+        "price": "59.99",
+        "discountPercentage": 15,
+        "rating": 4.4,
+        "stock": 85,
+        "images": [
+            "shaver1.jpg",
+            "shaver2.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-04T08:00:00Z",
+            "updatedAt": "2024-08-04T08:00:00Z",
+            "barcode": "2817839095238",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 3-5 business days"
+    },
+    {
+        "name": "Smart Door Lock",
+        "description": "Wi-Fi enabled smart door lock with keyless entry.",
+        "category": "Smart Home",
+        "price": "179.99",
+        "discountPercentage": 10,
+        "rating": 4.6,
+        "stock": 40,
+        "images": [
+            "lock1.jpg",
+            "lock2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-05T13:00:00Z",
+            "updatedAt": "2024-08-05T13:00:00Z",
+            "barcode": "2817839095239",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "2-year warranty",
+        "shippingInformation": "Ships in 7-10 business days"
+    },
+    {
+        "name": "Wireless Keyboard",
+        "description": "Slim wireless keyboard with long battery life.",
+        "category": "Accessories",
+        "price": "29.99",
+        "discountPercentage": 20,
+        "rating": 4.5,
+        "stock": 90,
+        "images": [
+            "keyboard1.jpg",
+            "keyboard2.jpg"
+        ],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-07T12:00:00Z",
+            "updatedAt": "2024-08-07T12:00:00Z",
+            "barcode": "2817839095240",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "1-year warranty",
+        "shippingInformation": "Ships in 3-5 business days"
+    },
+    {
+        "name": "Air Purifier",
+        "description": "High-efficiency air purifier with HEPA filter.",
+        "category": "Home Appliances",
+        "price": "129.99",
+        "discountPercentage": 15,
+        "rating": 4.8,
+        "stock": 50,
+        "images": [
+            "airpurifier1.jpg",
+            "airpurifier2.jpg"
+        ],
+        "returnPolicy": "15 days return policy",
+        "minimumOrderQuantity": 1,
+        "metadate": {
+            "createdAt": "2024-08-08T16:00:00Z",
+            "updatedAt": "2024-08-08T16:00:00Z",
+            "barcode": "2817839095241",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "warrantyInformation": "2-year warranty",
+        "shippingInformation": "Ships in 7-10 business days"
+    }
+]

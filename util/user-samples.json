@@ -1,0 +1,150 @@
+[
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "password123",
+    "photo": "john_photo.jpg",
+    "passwordConfirm": "password123"
+  },
+  {
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "password": "securepassword",
+    "photo": "jane_photo.png",
+    "passwordConfirm": "securepassword"
+  },
+  {
+    "name": "Emily Johnson",
+    "email": "emily.johnson@example.com",
+    "password": "mypassword",
+    "photo": null,
+    "passwordConfirm": "mypassword"
+  },
+  {
+    "name": "Michael Brown",
+    "email": "michael.brown@example.com",
+    "password": "abc123456",
+    "photo": "michael_photo.jpg",
+    "passwordConfirm": "abc123456"
+  },
+  {
+    "name": "Sarah Davis",
+    "email": "sarah.davis@example.com",
+    "password": "password321",
+    "photo": "sarah_photo.png",
+    "passwordConfirm": "password321"
+  },
+  {
+    "name": "Chris Martinez",
+    "email": "chris.martinez@example.com",
+    "password": "pass123word",
+    "photo": null,
+    "passwordConfirm": "pass123word"
+  },
+  {
+    "name": "Laura Wilson",
+    "email": "laura.wilson@example.com",
+    "password": "password111",
+    "photo": "laura_photo.jpg",
+    "passwordConfirm": "password111"
+  },
+  {
+    "name": "David Clark",
+    "email": "david.clark@example.com",
+    "password": "mypassword789",
+    "photo": "david_photo.png",
+    "passwordConfirm": "mypassword789"
+  },
+  {
+    "name": "Linda Martinez",
+    "email": "linda.martinez@example.com",
+    "password": "qwerty123",
+    "photo": "linda_photo.jpg",
+    "passwordConfirm": "qwerty123"
+  },
+  {
+    "name": "James Anderson",
+    "email": "james.anderson@example.com",
+    "password": "letmein1234",
+    "photo": "james_photo.png",
+    "passwordConfirm": "letmein1234"
+  },
+  {
+    "name": "Patricia Thomas",
+    "email": "patricia.thomas@example.com",
+    "password": "12345678",
+    "photo": "patricia_photo.jpg",
+    "passwordConfirm": "12345678"
+  },
+  {
+    "name": "Robert Jackson",
+    "email": "robert.jackson@example.com",
+    "password": "password321",
+    "photo": "robert_photo.png",
+    "passwordConfirm": "password321"
+  },
+  {
+    "name": "Maria Harris",
+    "email": "maria.harris@example.com",
+    "password": "password999",
+    "photo": "maria_photo.jpg",
+    "passwordConfirm": "password999"
+  },
+  {
+    "name": "Thomas White",
+    "email": "thomas.white@example.com",
+    "password": "mysecretpassword",
+    "photo": "thomas_photo.png",
+    "passwordConfirm": "mysecretpassword"
+  },
+  {
+    "name": "Karen Moore",
+    "email": "karen.moore@example.com",
+    "password": "hello123",
+    "photo": "karen_photo.jpg",
+    "passwordConfirm": "hello123"
+  },
+  {
+    "name": "Charles Lee",
+    "email": "charles.lee@example.com",
+    "password": "password1234",
+    "photo": "charles_photo.png",
+    "passwordConfirm": "password1234"
+  },
+  {
+    "name": "Susan Taylor",
+    "email": "susan.taylor@example.com",
+    "password": "mypassword123",
+    "photo": "susan_photo.jpg",
+    "passwordConfirm": "mypassword123"
+  },
+  {
+    "name": "Daniel Walker",
+    "email": "daniel.walker@example.com",
+    "password": "ilovecats",
+    "photo": "daniel_photo.png",
+    "passwordConfirm": "ilovecats"
+  },
+  {
+    "name": "Jessica Martinez",
+    "email": "jessica.martinez@example.com",
+    "password": "password567",
+    "photo": "jessica_photo.jpg",
+    "passwordConfirm": "password567"
+  },
+  {
+    "name": "Matthew Young",
+    "email": "matthew.young@example.com",
+    "password": "admin123",
+    "photo": "matthew_photo.png",
+    "passwordConfirm": "admin123"
+  },
+  {
+    "name": "admin",
+    "email": "admin@example.com",
+    "password": "admin123",
+    "photo": "admin_photo.png",
+    "passwordConfirm": "admin123",
+    "role": "admin"
+  }
+]
